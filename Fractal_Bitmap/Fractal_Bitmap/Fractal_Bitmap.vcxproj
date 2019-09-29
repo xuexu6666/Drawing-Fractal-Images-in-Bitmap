@@ -127,12 +127,15 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="src\Bitmap.cpp" />
     <ClCompile Include="src\Mandelbrot.cpp" />
+    <ClCompile Include="src\ZoomList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Bitmap.h" />
     <ClInclude Include="src\BitmapFileHeader.h" />
     <ClInclude Include="src\BitmapInfoHeader.h" />
     <ClInclude Include="src\Mandelbrot.h" />
+    <ClInclude Include="src\Zoom.h" />
+    <ClInclude Include="src\ZoomList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

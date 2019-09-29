@@ -22,15 +22,25 @@ namespace caveofprogramming {
 		ZoomList m_zoomList;
 		int m_total{ 0 };
 
-	public:
-		FractalCreator(int width, int height);
-		virtual ~FractalCreator();
+		std::vector<int> m_ranges;
+		std::vector<RGB> m_colors;
+		std::vector<int> m_rangeTotals;
 
+		bool m_bGotFirstRange{ false };
+
+	private:
 		void calculateIteration();
 		void calculateTotalIterations();
+		void calculateRangeTotals();
 		void drawFractal();
-		void addZoom(const Zoom& zoom);
 		void writeBitmap(std::string name);
+		int getRange(int iterations) const;
+
+	public:
+		FractalCreator(int width, int height);
+		void addRange(double rangeEnd, const RGB& rgb);
+		void addZoom(const Zoom& zoom);
+		virtual ~FractalCreator();
 		void run(std::string name);
 	};
 }

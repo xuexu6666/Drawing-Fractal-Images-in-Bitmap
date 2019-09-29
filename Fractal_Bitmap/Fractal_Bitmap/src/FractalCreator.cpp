@@ -2,6 +2,14 @@
 
 namespace caveofprogramming {
 
+	void FractalCreator::run(std::string name) {
+		calculateIteration();
+		calculateTotalIterations();
+		drawFractal();
+		writeBitmap("test.bmp");
+
+	}
+
 	FractalCreator::FractalCreator(int width, int height) :
 		m_width(width), m_height(height), m_histogram(Mandelbrot::MAX_ITERATIONS, 0), 
 		m_fractal(m_width* m_height, 0), m_bitmap(m_width, m_height), m_zoomList(m_width, m_height) {
@@ -53,6 +61,10 @@ namespace caveofprogramming {
 
 	void FractalCreator::drawFractal() {
 
+		RGB startColor(0, 0, 20);
+		RGB endColor(255, 128, 74);
+		RGB colorDiff = endColor - startColor;
+
 		for (int y = 0; y < m_height; y++) {
 			for (int x = 0; x < m_width; x++) {
 
@@ -70,7 +82,9 @@ namespace caveofprogramming {
 						hue += ((double)m_histogram[i]) / m_total;
 					}
 
-					green = hue * 255;
+					red = startColor.r + colorDiff.r * hue;
+					green = startColor.g + colorDiff.g * hue;
+					blue = startColor.b + colorDiff.b * hue;
 				}
 
 				m_bitmap.setPixel(x, y, red, green, blue);

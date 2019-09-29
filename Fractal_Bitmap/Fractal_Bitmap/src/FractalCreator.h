@@ -8,6 +8,7 @@
 #include "Mandelbrot.h"
 #include "Bitmap.h"
 #include "ZoomList.h"
+#include "RGB.h"
 
 namespace caveofprogramming {
 
@@ -30,5 +31,6 @@ namespace caveofprogramming {
 		void drawFractal();
 		void addZoom(const Zoom& zoom);
 		void writeBitmap(std::string name);
+		void run(std::string name);
 	};
 }

@@ -128,6 +128,7 @@
     <ClCompile Include="src\Bitmap.cpp" />
     <ClCompile Include="src\FractalCreator.cpp" />
     <ClCompile Include="src\Mandelbrot.cpp" />
+    <ClCompile Include="src\RGB.cpp" />
     <ClCompile Include="src\ZoomList.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +137,7 @@
     <ClInclude Include="src\BitmapInfoHeader.h" />
     <ClInclude Include="src\FractalCreator.h" />
     <ClInclude Include="src\Mandelbrot.h" />
+    <ClInclude Include="src\RGB.h" />
     <ClInclude Include="src\Zoom.h" />
     <ClInclude Include="src\ZoomList.h" />
   </ItemGroup>

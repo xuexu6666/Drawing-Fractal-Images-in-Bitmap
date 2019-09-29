@@ -1,4 +1,3 @@
 ﻿  Main.cpp
-  Mandelbrot.cpp
-  Generating Code...
+C:\Users\lucin\Desktop\Drawing_Fractal_Images\Drawing-Fractal-Images-in-Bitmap\Fractal_Bitmap\Fractal_Bitmap\Main.cpp(58,16): warning C4244: '=': conversion from 'double' to 'uint8_t', possible loss of data
   Fractal_Bitmap.vcxproj -> C:\Users\lucin\Desktop\Drawing_Fractal_Images\Drawing-Fractal-Images-in-Bitmap\Fractal_Bitmap\Debug\Fractal_Bitmap.exe
